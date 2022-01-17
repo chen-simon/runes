@@ -95,7 +95,7 @@ p::
 
 q::
     thorn := false
-    Send, Q
+    Send, ᛟ    ; Anglo-Saxton rune for "oe", used as a "q"
     Return
 
 r::
