@@ -65,7 +65,7 @@ j::
 
 k::
     thorn := false
-    Send, K
+    Send, ᚴ    ; Medieval rune for "K"
     Return
 
 l::
@@ -121,7 +121,7 @@ u::
 
 v::
     thorn := false
-    Send, V
+    Send, ᚡ    ; Medieval rune for "K"
     Return
 
 w::
@@ -141,5 +141,5 @@ y::
 
 z::
     thorn := false
-    Send, Z
+    Send, ᛦ    ; Tolkien rune for "Z"
     Return
