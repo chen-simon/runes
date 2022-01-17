@@ -95,7 +95,7 @@ p::
 
 q::
     thorn := false
-    Send, ᛟ    ; Anglo-Saxton rune for "oe", used as a "q"
+    Send, ᛟ    ; Anglo-Saxon rune for "oe", used as a "q"
     Return
 
 r::
@@ -142,4 +142,22 @@ y::
 z::
     thorn := false
     Send, ᛦ    ; Tolkien rune for "Z"
+    Return
+
+
+; Non-character keystrkoes
+~Space::
+    thorn := false
+    Return
+
+~.::
+    thorn := false
+    Return
+
+~,::
+    thorn := false
+    Return
+
+~$BackSpace::
+    thorn := false
     Return
