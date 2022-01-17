@@ -158,6 +158,14 @@ z::
     thorn := false
     Return
 
-~$BackSpace::
+~BackSpace::
+    thorn := false
+    Return
+
+~!::
+    thorn := false
+    Return
+
+~?::
     thorn := false
     Return
