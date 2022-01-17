@@ -32,7 +32,7 @@ rune = {
 file_text = ''
 
 for key in rune:
-    file_text += f"{key}:: Send, {rune[key]}\n"
+    file_text += f"{key}::\n    thorn := false\n    Send, {rune[key]}\n    Return\n\n"
 
-with codecs.open("rune.ahk", "w", "utf-8-sig") as f:
+with codecs.open("rune2.ahk", "w", "utf-8-sig") as f:
     f.write(file_text)

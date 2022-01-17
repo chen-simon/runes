@@ -1,14 +1,4 @@
-﻿#SingleInstance, force
-Suspend, on
-
-; Variables
-thorn := true
-
-; Toggle Script
-!r:: Suspend, Toggle
-
-; Runes
-a::
+﻿a::
     thorn := false
     Send, ᚪ
     Return
@@ -44,13 +34,8 @@ g::
     Return
 
 h::
-    if (thorn) {
-        Send, {BackSpace}
-        Send, ᚦ    ; Thorn logic
-    } else {
-        Send, ᚻ
-    }
     thorn := false
+    Send, ᚻ
     Return
 
 i::
@@ -108,11 +93,10 @@ s::
     Send, ᛋ
     Return
 
-t:: 
-    thorn := true
+t::
+    thorn := false
     Send, ᛏ
     Return
-
 
 u::
     thorn := false
@@ -143,3 +127,4 @@ z::
     thorn := false
     Send, Z
     Return
+
