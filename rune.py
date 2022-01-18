@@ -25,7 +25,7 @@ rune = {
     'd': ('ᛞ', default),
     'e': ('ᛖ', default),
     'f': ('ᚠ', default),
-    'g': ('ᛡ', g),
+    'g': ('ᚷ', g),
     'h': ('ᚻ', h),
     'i': ('ᛁ', i),
     'j': ('ᛡ', default),
