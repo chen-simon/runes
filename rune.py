@@ -48,22 +48,25 @@ rune = {
     '.': ('᛫', default),
 }
 
+ignore = {"'", "-"}
+
 raw_text = ''
 with codecs.open('input.txt', 'r', 'utf-8-sig') as f:
     raw_text = f.read()
 
 parsed, state = '', 0
 for char in raw_text:
-    if char in rune:
-        parsed += rune[char][0]
-        updates = rune[char][1](state)
+    l_char = char.lower()
+    if l_char in rune:
+        parsed += rune[l_char][0]
+        updates = rune[l_char][1](state)
 
         state = updates[0]  # Update state
         if updates[1] != 0:
             parsed = parsed[:-updates[1]]   # Remove state characters
         parsed += updates[2]  # Add state character
 
-    else:
+    elif l_char not in ignore:
         parsed += char
 
 with codecs.open('output.txt', 'w', 'utf-8-sig') as f:
