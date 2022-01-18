@@ -141,7 +141,7 @@ y::
 
 z::
     thorn := false
-    Send, ᛦ    ; Tolkien rune for "Z"
+    Send, ᛣ    ; Tolkien rune for "Z"
     Return
 
 
