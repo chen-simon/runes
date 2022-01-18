@@ -16,7 +16,7 @@ Each letter or letter group in the latin alphabet has a corresponding rune. Each
 |d    |ᛞ    |
 |e    |ᛖ    |
 |f    |ᚠ    |
-|g    |ᛡ    |
+|g    |ᚷ    |
 |h    |ᚻ    |
 |i    |ᛁ    |
 |ing  |ᛝ    |
