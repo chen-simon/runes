@@ -46,6 +46,10 @@ rune = {
     'y': ('ᚣ', default),
     'z': ('ᛣ', default),
     '.': ('᛫', default),
+    ',': (',', default),
+    ' ': (' ', default),
+    '!': ('!', default),
+    '?': ('?', default),
 }
 
 ignore = {"'", "-"}
