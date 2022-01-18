@@ -1,7 +1,14 @@
 ﻿#SingleInstance, force
 Suspend, on
 
-; Variables
+; State
+;
+; 0 - Normal
+; 1 - Thorn 1
+; 2 - Ing 1
+; 3 - Ing 2
+;
+
 state := 0
 
 ; Toggle Script
