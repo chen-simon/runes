@@ -2,171 +2,180 @@
 Suspend, on
 
 ; Variables
-thorn := true
+state := 0
 
 ; Toggle Script
 !r:: Suspend, Toggle
 
 ; Runes
 a::
-    thorn := false
+    state := 0
     Send, ᚪ
     Return
 
 b::
-    thorn := false
+    state := 0
     Send, ᛒ
     Return
 
 c::
-    thorn := false
+    state := 0
     Send, ᚳ
     Return
 
 d::
-    thorn := false
+    state := 0
     Send, ᛞ
     Return
 
 e::
-    thorn := false
+    state := 0
     Send, ᛖ
     Return
 
 f::
-    thorn := false
+    state := 0
     Send, ᚠ
     Return
 
 g::
-    thorn := false
-    Send, ᚷ
+    if (state == 3) {
+        Send, {BackSpace 2}
+        Send, ᛝ
+    } else {
+        Send, ᚷ
+    }
+    state := 0
     Return
 
 h::
-    if (thorn) {
+    if (state == 1) {
         Send, {BackSpace}
         Send, ᚦ    ; Thorn logic
     } else {
         Send, ᚻ
     }
-    thorn := false
+    state := 0
     Return
 
 i::
-    thorn := false
+    state := 2
     Send, ᛁ
     Return
 
 j::
-    thorn := false
+    state := 0
     Send, ᛡ
     Return
 
 k::
-    thorn := false
+    state := 0
     Send, ᚴ    ; Medieval rune for "K"
     Return
 
 l::
-    thorn := false
+    state := 0
     Send, ᛚ
     Return
 
 m::
-    thorn := false
+    state := 0
     Send, ᛗ
     Return
 
 n::
-    thorn := false
+    if (state == 2) {
+        state := 3
+    } else {
+        state := 0
+    }
     Send, ᚾ
     Return
 
 o::
-    thorn := false
+    state := 0
     Send, ᚩ
     Return
 
 p::
-    thorn := false
+    state := 0
     Send, ᛈ
     Return
 
 q::
-    thorn := false
+    state := 0
     Send, ᛟ    ; Anglo-Saxon rune for "oe", used as a "q"
     Return
 
 r::
-    thorn := false
+    state := 0
     Send, ᚱ
     Return
 
 s::
-    thorn := false
+    state := 0
     Send, ᛋ
     Return
 
 t:: 
-    thorn := true
+    state := 1
     Send, ᛏ
     Return
 
 
 u::
-    thorn := false
+    state := 0
     Send, ᚢ
     Return
 
 v::
-    thorn := false
+    state := 0
     Send, ᚡ    ; Medieval rune for "K"
     Return
 
 w::
-    thorn := false
+    state := 0
     Send, ᚹ
     Return
 
 x::
-    thorn := false
+    state := 0
     Send, ᛉ
     Return
 
 y::
-    thorn := false
+    state := 0
     Send, ᚣ
     Return
 
 z::
-    thorn := false
+    state := 0
     Send, ᛣ    ; Tolkien rune for "Z"
     Return
 
 
 ; Non-character keystrkoes
 ~Space::
-    thorn := false
+    state := 0
     Return
 
 .::
-    thorn := false
+    state := 0
     Send, ᛫
     Return
 
 ~,::
-    thorn := false
+    state := 0
     Return
 
 ~BackSpace::
-    thorn := false
+    state := 0
     Return
 
 ~!::
-    thorn := false
+    state := 0
     Return
 
 ~?::
-    thorn := false
+    state := 0
     Return
