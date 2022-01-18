@@ -150,8 +150,9 @@ z::
     thorn := false
     Return
 
-~.::
+.::
     thorn := false
+    Send, ᛫
     Return
 
 ~,::
