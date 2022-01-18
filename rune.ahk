@@ -17,7 +17,7 @@ state := 0
 ; Runes
 a::
     state := 0
-    Send, ᚪ
+    Send, ᚫ
     Return
 
 b::
