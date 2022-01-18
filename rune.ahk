@@ -94,7 +94,7 @@ n::
 
 o::
     state := 0
-    Send, ᚩ
+    Send, ᛟ
     Return
 
 p::
@@ -104,7 +104,7 @@ p::
 
 q::
     state := 0
-    Send, ᛟ    ; Anglo-Saxon rune for "oe", used as a "q"
+    Send, ᛩ    ; Stealing from medieval rune Q 
     Return
 
 r::
