@@ -55,7 +55,7 @@ rune = {
     'u': ('ᚢ', default),
     'v': ('ᚡ', default),
     'w': ('ᚹ', default),
-    'state': ('ᛉ', default),
+    'x': ('ᛉ', default),
     'y': ('ᚣ', default),
     'z': ('ᛣ', default),
     '.': ('᛫', default),
