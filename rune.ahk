@@ -2,187 +2,197 @@
 Suspend, on
 
 ; State
-;
-; 0 - Normal
-; 1 - Thorn 1
-; 2 - Ing 1
-; 3 - Ing 2
-;
-
-state := 0
+state := ""
 
 ; Toggle Script
 !r:: Suspend, Toggle
 
 ; Runes
 a::
-    state := 0
+    state := ""
     Send, ᚫ
     Return
 
 b::
-    state := 0
+    state := ""
     Send, ᛒ
     Return
 
 c::
-    state := 0
+    state := ""
     Send, ᚳ
     Return
 
 d::
-    state := 0
+    state := ""
     Send, ᛞ
     Return
 
 e::
-    state := 0
+    state := ""
     Send, ᛖ
     Return
 
 f::
-    state := 0
+    state := ""
     Send, ᚠ
     Return
 
 g::
-    if (state == 3) {
+    if (state == "in") {
+        state := ""
         Send, {BackSpace 2}
         Send, ᛝ
-    } else {
+    } else if (state == "ou") {
+        state := "oug" 
+        Send, ᚷ
+   } else {
+        state := ""
         Send, ᚷ
     }
-    state := 0
     Return
 
 h::
-    if (state == 1) {
+    if (state == "t") {
+        state := ""
         Send, {BackSpace}
-        Send, ᚦ    ; Thorn logic
+        Send, ᚦ
+    } else if (state == "oug") {
+        state := ""
+        Send {BackSpace 3}
+        Send, ᛟ
     } else {
+        state := ""
         Send, ᚻ
     }
-    state := 0
     Return
 
 i::
-    state := 2
+    state := "i"
     Send, ᛁ
     Return
 
 j::
-    state := 0
+    state := ""
     Send, ᛡ
     Return
 
 k::
-    state := 0
+    state := ""
     Send, ᚴ    ; Medieval rune for "K"
     Return
 
 l::
-    state := 0
+    state := ""
     Send, ᛚ
     Return
 
 m::
-    state := 0
+    state := ""
     Send, ᛗ
     Return
 
 n::
-    if (state == 2) {
-        state := 3
+    if (state == "i") {
+        state := "in"
     } else {
-        state := 0
+        state := ""
     }
     Send, ᚾ
     Return
 
 o::
-    state := 0
-    Send, ᛟ
+    state := "o"
+    Send, ᚩ
     Return
 
 p::
-    state := 0
+    state := ""
     Send, ᛈ
     Return
 
 q::
-    state := 0
+    state := ""
     Send, ᛩ    ; Stealing from medieval rune Q 
     Return
 
 r::
-    state := 0
+    state := ""
     Send, ᚱ
     Return
 
 s::
-    state := 0
+    state := ""
     Send, ᛋ
     Return
 
 t:: 
-    state := 1
+    state := "t"
     Send, ᛏ
     Return
 
 
 u::
-    state := 0
+    if (state == "o") {
+        state := "ou"
+    } else {
+        state := ""
+    }
     Send, ᚢ
     Return
 
 v::
-    state := 0
+    state := ""
     Send, ᚡ    ; Medieval rune for "K"
     Return
 
 w::
-    state := 0
+    state := ""
     Send, ᚹ
     Return
 
 x::
-    state := 0
+    state := ""
     Send, ᛉ
     Return
 
 y::
-    state := 0
+    state := ""
     Send, ᚣ
     Return
 
 z::
-    state := 0
+    state := ""
     Send, ᛣ    ; Tolkien rune for "Z"
     Return
 
 
 ; Non-character keystrkoes
 ~Space::
-    state := 0
+    state := ""
     Return
 
 .::
-    state := 0
+    state := ""
     Send, ᛫
     Return
 
 ~,::
-    state := 0
+    state := ""
     Return
 
 ~BackSpace::
-    state := 0
+    state := ""
     Return
 
 ~!::
-    state := 0
+    state := ""
     Return
 
 ~?::
-    state := 0
+    state := ""
+    Return
+
+~Enter::
+    state := ""
     Return

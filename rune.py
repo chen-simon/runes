@@ -1,22 +1,35 @@
 import codecs
 
-def default(x):
-    return (0, 0, '')
+def default(state):
+    return ('', 0, '')
 
-def t(x):
-    return (1, 0, '') 
+def g(state):
+    if state == 'in':
+        return ('', 2, 'ᛝ')
+    elif state == 'ou':
+        return ('oug', 0, '')
+    else:
+        return ('', 0, '')
 
-def h(x):
-    return (0, 2, 'ᚦ') if x == 1 else (0, 0, '')
+def h(state):
+    if state == 't':
+        return ('', 0, 'ᚦ')
+    elif state == 'oug':
+        return ('', 0, 'ᛟ')
+    else:
+        return ('', 0, '') 
 
-def i(x):
+def i(state):
     return (2, 0, '') 
 
-def n(x):
-    return (3, 0, '') if x == 2 else (0, 0, '')
+def n(state):
+    return (3, 0, '') if state == 2 else (0, 0, '')
 
-def g(x):
-    return (0, 3, 'ᛝ') if x == 3 else (0, 0, '')
+def o(state):
+    return ('o', 0, '')
+
+def t(state):
+    return ('t', 0, 'ᛏ')
 
 rune = {
     'a': ('ᚫ', default),
@@ -42,7 +55,7 @@ rune = {
     'u': ('ᚢ', default),
     'v': ('ᚡ', default),
     'w': ('ᚹ', default),
-    'x': ('ᛉ', default),
+    'state': ('ᛉ', default),
     'y': ('ᚣ', default),
     'z': ('ᛣ', default),
     '.': ('᛫', default),
@@ -54,12 +67,12 @@ rune = {
 
 ignore = {"'", "-"}
 
-raw_text = ''
-with codecs.open('input.txt', 'r', 'utf-8-sig') as f:
-    raw_text = f.read()
+raw_testatet = ''
+with codecs.open('input.tstatet', 'r', 'utf-8-sig') as f:
+    raw_testatet = f.read()
 
 parsed, state = '', 0
-for char in raw_text:
+for char in raw_testatet:
     l_char = char.lower()
     if l_char in rune:
         parsed += rune[l_char][0]
@@ -73,5 +86,5 @@ for char in raw_text:
     elif l_char not in ignore:
         parsed += char
 
-with codecs.open('output.txt', 'w', 'utf-8-sig') as f:
+with codecs.open('output.tstatet', 'w', 'utf-8-sig') as f:
     f.write(parsed)

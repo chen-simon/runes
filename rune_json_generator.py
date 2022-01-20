@@ -5,5 +5,5 @@ rune = "ᚫᛒᚳᛞᛖᚠᛡᚻᛁᛡᚴᛚᛗᚾᛟᛈᛩᚱᛋᛏᚢᚡᚹᛉ
 
 print('{')
 for i, letter in enumerate(eng):
-    print(f"    '{letter}': ('{rune[i]}', lambda x : 0),")
+    print(f"|{letter}    |{rune[i]}    |")
 print('}')
