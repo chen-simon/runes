@@ -25,7 +25,8 @@ Each letter or letter group in the latin alphabet has a corresponding rune. Each
 |l    |ᛚ    |
 |m    |ᛗ    |
 |n    |ᚾ    |
-|o    |ᛟ    |
+|o    |ᚩ    |
+|ough |ᛟ    |
 |p    |ᛈ    |
 |q    |ᛩ    |
 |r    |ᚱ    |
