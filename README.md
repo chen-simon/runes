@@ -1,8 +1,9 @@
 # Runes
-An AHK Keyboard and Translator for our modified version of the Anglo-Saxon runic alphabet.
+An AHK and Keylayout Keyboard and Translator for our modified version of the Anglo-Saxon runic alphabet.
 
 - Run `rune.ahk` to enable the keyboard and press `Alt + R` to toggle between runic and english input. 
 - Run `rune.py` to translate all the text in `input.txt` from the Latin alphabet to our Runic scripture to `output.txt`. 
+- For Mac users: install `rune.keylayout` to your system's keyboards [Tutorial here](https://weibeld.net/mac/custom-keyboard-layout.html).
 
 Created by [Simon Chen](https://github.com/simonchenwastaken/) and [Zaina Azhar](https://github.com/zaina-azhar/).
 
